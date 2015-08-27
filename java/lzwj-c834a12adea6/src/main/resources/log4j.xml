@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+	<appender name="compress.log" class="org.apache.log4j.FileAppender">
+		<param name="file" value="compress.log" />
+		<param name="append" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="conversionPattern" value="%-4r [%t] %-5p %c %x - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="decompress.log" class="org.apache.log4j.FileAppender">
+		<param name="file" value="decompress.log" />
+		<param name="append" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="conversionPattern" value="%-4r [%t] %-5p %c %x - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="input.log" class="org.apache.log4j.FileAppender">
+		<param name="file" value="input.log" />
+		<param name="append" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="conversionPattern" value="%-4r [%t] %-5p %c %x - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="output.log" class="org.apache.log4j.FileAppender">
+		<param name="file" value="output.log" />
+		<param name="append" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="conversionPattern" value="%-4r [%t] %-5p %c %x - %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="compress">
+		<appender-ref ref="compress.log" />
+	</logger>
+
+	<logger name="decompress">
+		<appender-ref ref="decompress.log" />
+	</logger>
+
+	<logger name="input">
+		<appender-ref ref="input.log" />
+	</logger>
+
+	<logger name="output">
+		<appender-ref ref="output.log" />
+	</logger>
+
+	<root>
+		<level value="ALL" />
+	</root>
+</log4j:configuration>
