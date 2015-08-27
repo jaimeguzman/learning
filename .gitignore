@@ -1,8 +1,11 @@
-*.class
-*.log
+.idea/
+.DS_Store
+
 
 ######### SCALA ############
 # sbt specific
+*.class
+*.log
 .cache
 .history
 .lib/
@@ -17,7 +20,7 @@ project/plugins/project/
 .scala_dependencies
 .worksheet
 
-.idea/
+
 
 
 ######### C++ ############
