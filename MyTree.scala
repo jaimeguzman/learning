@@ -22,7 +22,7 @@ trait Tree[+A] {
     case n: Node[A] => Some(n.r)
     case l: Leaf[A] => None
     case Empty      => None
-  }
+  } 
 
 
 
@@ -35,7 +35,9 @@ trait Tree[+A] {
 
 
 object LZTrie extends App {
+
   val t: Tree[Symbol] = Node('F, Node('B, Leaf('A), Node('D, Leaf('C), Leaf('E))), Node('G, Empty, Node('I, Leaf('H), Empty)))
+  
   println("tree: " + t)
 
 
