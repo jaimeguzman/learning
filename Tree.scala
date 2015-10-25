@@ -288,7 +288,17 @@ case class Leaf[A](v: A) extends Tree[A]
 case object Empty extends Tree[Nothing]
 
 object Run extends App {
-  val t: Tree[Symbol] = Node('F, Node('B, Leaf('A), Node('D, Leaf('C), Leaf('E))), Node('G, Empty, Node('I, Leaf('H), Empty)))
+  val t: Tree[Symbol] = Node('F, 
+                            Node('B, 
+                                  Leaf('A), 
+                                  Node(
+                                      'D,
+                                       Leaf('C), 
+                                       Leaf('E))
+                                    )
+                            , Node('G, 
+                                    Empty, 
+                                    Node('I, Leaf('H), Empty)))
   println("tree: " + t)
 
   //print the value of b node navigating from root
